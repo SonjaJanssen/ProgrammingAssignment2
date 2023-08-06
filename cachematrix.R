@@ -4,7 +4,7 @@
 ## Write a short comment describing this function
 
 # Review: SJ & 5 reviews
-# Codes by Sonja 
+# Codes by Sonja Janssen-Sahebzad
 ### Graded Assignment: 100%
 ####-----------------------------------------------------------------------------------------------------------------------------------------------####
 ##     Assignment 2: Caching the Inverse of a Matrix in R and testing my codes scripts!
