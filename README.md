@@ -1,6 +1,6 @@
 ### Introduction
 
-This second programming assignment will require you to write an R
+This second project programming assignment will require you to write an R
 function that is able to cache potentially time-consuming computations.
 For example, taking the mean of a numeric vector is typically a fast
 operation. However, for a very long vector, it may take too long to
@@ -100,6 +100,4 @@ In order to complete this assignment, you must do the following:
 5.  Submit to Coursera the URL to your GitHub repository that contains
     the completed R code for the assignment.
 
-### Grading
-
-This assignment will be graded via peer assessment.
+### project assignment 
