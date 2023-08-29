@@ -5,7 +5,7 @@ Project   Assignment Prgramming in R and tested all the codes
 
 # Review: SJ & 5 reviews
 # Codes by Sonja Janssen-Sahebzad
-### Graded Assignment: 100%
+### Assignment: 100%
 ####-----------------------------------------------------------------------------------------------------------------------------------------------####
 ##     Assignment 2: Caching the Inverse of a Matrix in R and testing my codes scripts!
 ####-----------------------------------------------------------------------------------------------------------------------------------------------####
@@ -104,5 +104,4 @@ cacheSolve <- function(x, ...) {
 # [2,] -0.3333333  0.3333333
 
 ####-------------------------------------------------------------------------------------------------------------------------------- ####
-### Graded assignment: 100% score
-### Graded assignment: 100%, 5 reviews
+
