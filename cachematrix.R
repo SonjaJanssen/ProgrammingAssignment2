@@ -1,6 +1,6 @@
-Assignment:
+Project   Assignment Prgramming in R and tested all the codes
 ## Put comments here that give an overall description of what your functions do
-
+## R version 4.2.2 in RStudio
 ## Write a short comment describing this function
 
 # Review: SJ & 5 reviews
