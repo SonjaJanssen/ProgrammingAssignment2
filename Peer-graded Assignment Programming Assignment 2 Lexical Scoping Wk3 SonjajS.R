@@ -1,9 +1,8 @@
-# Review: SJ & 
-
-# Codes by Sonja 
-### Graded Assignment
+# Codes by Sonja Janssen-Sahebzad 🎓 
+### Graded Assignment:  100%, # Review: SJ & Peers
 ####-----------------------------------------------------------------------------------------------------------------------------------------------####
 ##     Assignment 2: Caching the Inverse of a Matrix in R and testing my codes scripts!
+#      At Johns Hopkins University 🎓 
 ####-----------------------------------------------------------------------------------------------------------------------------------------------####
 ##     Matrix inversion is usually a costly computation and there may be some benefit to caching the inverse of a matrix 
 ##     rather than compute it repeatedly (there are also alternatives to matrix inversion that we will not discuss here). 
@@ -105,4 +104,4 @@ cacheSolve <- function(x, ...) {
 # [2,] -0.3333333  0.3333333
  
 ####-------------------------------------------------------------------------------------------------------------------------------- ####
-### Graded assignment: 100%, 5 reviews
+
