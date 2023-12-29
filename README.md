@@ -1,3 +1,66 @@
+## De engelse vertaling vindt u verderop (Please find the english version below)
+# Project: Caching Inverse Matrix in R
+
+## Inleiding
+
+Deze tweede programmeeropdracht vereist het schrijven van een R-functie die in staat is om mogelijk tijdrovende berekeningen te cachen. Bijvoorbeeld, het nemen van het gemiddelde van een numerieke vector is doorgaans een snelle bewerking. Echter, voor een zeer lange vector kan het te lang duren om het gemiddelde te berekenen, vooral als het herhaaldelijk moet worden berekend (bijvoorbeeld in een lus). Als de inhoud van een vector niet verandert, kan het zinvol zijn om de waarde van het gemiddelde te cachen, zodat wanneer we het opnieuw nodig hebben, het kan worden opgezocht in de cache in plaats van opnieuw te worden berekend. In deze programmeeropdracht maak je gebruik van de scope-regels van de R-taal en hoe ze kunnen worden gemanipuleerd om de toestand binnen een R-object te behouden.
+
+Voorbeeld: Cachen van het Gemiddelde van een Vector
+
+In dit voorbeeld introduceren we de <<- operator die kan worden gebruikt om een waarde toe te wijzen aan een object in een omgeving die verschilt van de huidige omgeving. Hieronder staan twee functies die worden gebruikt om een speciaal object te maken dat een numerieke vector opslaat en het gemiddelde ervan cacht.
+
+De eerste functie, makeVector, creëert een speciale "vector", die eigenlijk een lijst is met een functie om de waarde van de vector in te stellen, de waarde van de vector op te vragen, de waarde van het gemiddelde in te stellen en de waarde van het gemiddelde op te vragen.
+
+
+makeVector <- function(x = numeric()) {
+  m <- NULL
+  set <- function(y) {
+    x <<- y
+    m <<- NULL
+  }
+  get <- function() x
+  setmean <- function(mean) m <<- mean
+  getmean <- function() m
+  list(set = set, get = get,
+       setmean = setmean,
+       getmean = getmean)
+}
+
+De volgende functie berekent het gemiddelde van de speciale "vector" die is gemaakt met de bovenstaande functie. Het controleert echter eerst of het gemiddelde al is berekend. Zo ja, dan haalt het het gemiddelde uit de cache en slaat de berekening over. Anders berekent het het gemiddelde van de gegevens en stelt de waarde van het gemiddelde in de cache via de setmean functie.
+
+
+cachemean <- function(x, ...) {
+  m <- x$getmean()
+  if (!is.null(m)) {
+    message("getting cached data")
+    return(m)
+  }
+  data <- x$get()
+  m <- mean(data, ...)
+  x$setmean(m)
+  m
+}
+
+Opdracht: Cachen van de Inverse van een Matrix
+
+Matrixinversie is meestal een kostbare berekening en het kan voordelig zijn om de inverse van een matrix te cachen in plaats van deze herhaaldelijk te berekenen (er zijn ook alternatieven voor matrixinversie die we hier niet zullen bespreken). Jouw opdracht is om een paar functies te schrijven die de inverse van een matrix cachen.
+
+Schrijf de volgende functies:
+
+makeCacheMatrix: Deze functie creëert een speciaal "matrix"-object dat zijn inverse kan cachen.
+cacheSolve: Deze functie berekent de inverse van de speciale "matrix" die wordt geretourneerd door makeCacheMatrix hierboven. Als de inverse al is berekend (en de matrix is niet gewijzigd), moet cacheSolve de inverse uit de cache halen.
+Het berekenen van de inverse van een vierkante matrix kan worden gedaan met de solve functie in R. Als bijvoorbeeld X een vierkante inverteerbare matrix is, retourneert solve(X) de inverse ervan.
+
+Voor deze opdracht wordt aangenomen dat de geleverde matrix altijd inverteerbaar is.
+
+Om deze opdracht te voltooien, moet je het volgende doen:
+
+Fork de GitHub-repository met de stub R-bestanden op https://github.com/rdpeng/ProgrammingAssignment2 om een kopie onder jouw eigen account te maken.
+Kloon je geforkte GitHub-repository naar je computer, zodat je de bestanden lokaal op je eigen machine kunt bewerken.
+Bewerk het R-bestand in de git-repository en plaats je oplossing in dat bestand (hernoem het bestand niet).
+Commit je voltooide R-bestand naar JOUW git-repository en push je git-tak naar de GitHub-repository onder jouw account.
+
+# The English version)
 ## Project caching inverse Matrix in R
 ### Introduction
 
@@ -98,7 +161,6 @@ In order to complete this assignment, you must do the following:
     solution in that file (please do not rename the file).
 4.  Commit your completed R file into YOUR git repository and push your
     git branch to the GitHub repository under your account.
-5.  Submit to Coursera the URL to your GitHub repository that contains
-    the completed R code for the assignment.
+
 
 ### project assignment 
